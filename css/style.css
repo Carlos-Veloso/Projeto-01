@@ -1,0 +1,849 @@
+/* =====================================================
+   1. VARIÁVEIS GLOBAIS DE CORES
+   ===================================================== */
+
+/* Seleciona o elemento raiz e permite criar variáveis
+   que podem ser utilizadas em todo o arquivo CSS */
+:root {
+
+    /* Cor de fundo principal do site */
+    --fundo: #211A17;
+
+    /* Cor escura utilizada no cabeçalho */
+    --escuro: #392820;
+
+    /* Cor principal dos textos */
+    --texto: #765039;
+
+    /* Cor dourada utilizada nos detalhes */
+    --dourado: #A77B50;
+
+    /* Cor vermelha principal dos botões */
+    --vermelho: #D2B995;
+
+    /* Cor vermelha mais escura para efeitos */
+    --vermelho-escuro: #5B3029;
+
+    /* Cor utilizada nas bordas */
+    --borda: #62604D;
+
+    /* Cor branca utilizada nos elementos */
+    --branco: rgb(238, 243, 238);
+
+/* Fecha a declaração das variáveis */
+}
+
+
+/* =====================================================
+   2. CONFIGURAÇÕES GERAIS
+   ===================================================== */
+
+/* Seleciona todos os elementos da página */
+* {
+
+    /* Faz largura e altura incluírem conteúdo,
+       preenchimento interno e bordas */
+    box-sizing: border-box;
+
+/* Fecha a regra geral */
+}
+
+
+/* Seleciona o documento HTML */
+html {
+
+    /* Faz a rolagem acontecer suavemente */
+    scroll-behavior: smooth;
+
+/* Fecha a regra HTML */
+}
+
+
+/* Seleciona o corpo inteiro da página */
+body {
+
+    /* Remove a margem padrão do navegador */
+    margin: 0;
+
+    /* Define a cor de fundo principal */
+    background: var(--fundo);
+
+    /* Define a cor principal dos textos */
+    color: var(--texto);
+
+    /* Define as fontes utilizadas no site */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Define o espaçamento entre as linhas */
+    line-height: 1.6;
+
+/* Fecha a regra body */
+}
+
+
+/* Seleciona todas as imagens do site */
+img {
+
+    /* Impede que as imagens ultrapassem o contêiner */
+    max-width: 100%;
+
+/* Fecha a regra das imagens */
+}
+
+
+/* =====================================================
+   3. CONTÊINER E CABEÇALHO
+   ===================================================== */
+
+/* Seleciona todos os elementos com a classe container */
+.container {
+
+    /* Define largura de 90%, limitada a 1120 pixels */
+    width: min(90%, 1120px);
+
+    /* Centraliza o contêiner horizontalmente */
+    margin: 0 auto;
+
+/* Fecha a regra container */
+}
+
+
+/* Seleciona o cabeçalho do site */
+.cabecalho {
+
+    /* Define o fundo escuro do cabeçalho */
+    background: var(--escuro);
+
+    /* Define a cor branca dos textos */
+    color: var(--branco);
+
+/* Fecha a regra cabecalho */
+}
+
+
+/* Seleciona o conteúdo interno do cabeçalho */
+.cabecalho-conteudo {
+
+    /* Ativa o Flexbox para organizar os elementos */
+    display: flex;
+
+    /* Organiza os elementos em coluna */
+    flex-direction: column;
+
+    /* Define o espaço entre os elementos */
+    gap: 1rem;
+
+    /* Adiciona espaçamento interno acima e abaixo */
+    padding: 1rem 0;
+
+/* Fecha a regra cabecalho-conteudo */
+}
+
+
+/* =====================================================
+   4. LOGO E MENU DE NAVEGAÇÃO
+   ===================================================== */
+
+/* Seleciona o elemento que possui a classe logo */
+.logo {
+
+    /* Ativa o Flexbox */
+    display: flex;
+
+    /* Alinha os elementos verticalmente ao centro */
+    align-items: center;
+
+    /* Define o espaço entre a imagem e o texto */
+    gap: 0.75rem;
+
+    /* Define a cor branca */
+    color: var(--branco);
+
+    /* Define o tamanho da fonte */
+    font-size: 1.2rem;
+
+    /* Deixa o texto em negrito */
+    font-weight: bold;
+
+    /* Remove o sublinhado do link */
+    text-decoration: none;
+
+/* Fecha a regra logo */
+}
+
+
+/* Seleciona a imagem que está dentro da classe logo */
+.logo img {
+
+    /* Define a largura da imagem */
+    width: 55px;
+
+    /* Define a altura da imagem */
+    height: 55px;
+
+    /* Cria uma borda dourada de 2 pixels */
+    border: 2px solid var(--dourado);
+
+    /* Transforma a imagem em um círculo */
+    border-radius: 50%;
+
+    /* Ajusta a imagem sem distorcer */
+    object-fit: cover;
+
+/* Fecha a regra da imagem */
+}
+
+
+/* Seleciona o menu de navegação */
+nav {
+
+    /* Ativa o Flexbox */
+    display: flex;
+
+    /* Permite que os links quebrem para outra linha */
+    flex-wrap: wrap;
+
+    /* Define o espaço entre os links */
+    gap: 1rem;
+
+/* Fecha a regra nav */
+}
+
+
+/* Seleciona os links que estão dentro do menu */
+nav a {
+
+    /* Define a cor branca dos links */
+    color: var(--branco);
+
+    /* Deixa os links em negrito */
+    font-weight: bold;
+
+    /* Remove o sublinhado dos links */
+    text-decoration: none;
+
+/* Fecha a regra dos links */
+}
+
+
+/* Aplica efeito quando o mouse passa sobre os links */
+nav a:hover {
+
+    /* Muda a cor do link para dourado */
+    color: var(--dourado);
+
+/* Fecha a regra hover */
+}
+
+
+/* =====================================================
+   5. SEÇÃO PRINCIPAL - HERO
+   ===================================================== */
+
+/* Seleciona a seção inicial do site */
+.hero {
+
+    /* Adiciona espaçamento acima e abaixo */
+    padding: 4rem 0;
+
+    /* Cria um fundo com degradê diagonal */
+    background: linear-gradient(135deg, var(--escuro), #211714);
+
+    /* Define a cor branca dos textos */
+    color: var(--branco);
+
+/* Fecha a regra hero */
+}
+
+
+/* Seleciona o conteúdo interno da seção inicial */
+.hero-conteudo {
+
+    /* Ativa o sistema de grade */
+    display: grid;
+
+    /* Define o espaço entre os elementos */
+    gap: 2rem;
+
+    /* Alinha os elementos verticalmente ao centro */
+    align-items: center;
+
+/* Fecha a regra hero-conteudo */
+}
+
+
+/* Seleciona os textos de destaque */
+.destaque {
+
+    /* Remove margens superior e laterais e define a inferior */
+    margin: 0 0 0.5rem;
+
+    /* Define a cor dourada */
+    color: var(--dourado);
+
+    /* Deixa o texto em negrito */
+    font-weight: bold;
+
+    /* Aumenta o espaço entre as letras */
+    letter-spacing: 0.08em;
+
+    /* Transforma o texto em letras maiúsculas */
+    text-transform: uppercase;
+
+/* Fecha a regra destaque */
+}
+
+
+/* Seleciona os títulos h1, h2 e h3 */
+h1,
+h2,
+h3 {
+
+    /* Remove a margem superior padrão */
+    margin-top: 0;
+
+    /* Define o espaçamento entre as linhas */
+    line-height: 1.15;
+
+/* Fecha a regra dos títulos */
+}
+
+
+/* Seleciona o título principal h1 */
+h1 {
+
+    /* Limita a largura do título a 12 caracteres aproximadamente */
+    max-width: 12ch;
+
+    /* Define a margem inferior */
+    margin-bottom: 1rem;
+
+    /* Ajusta o tamanho da fonte conforme a tela */
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+
+/* Fecha a regra h1 */
+}
+
+
+/* Seleciona os títulos h2 */
+h2 {
+
+    /* Define o tamanho da fonte */
+    font-size: 2rem;
+
+/* Fecha a regra h2 */
+}
+
+
+/* Seleciona o texto complementar da seção inicial */
+.hero-texto {
+
+    /* Limita a largura do parágrafo */
+    max-width: 50ch;
+
+    /* Define a margem inferior */
+    margin-bottom: 1.5rem;
+
+    /* Define uma cor clara para o texto */
+    color: #f4e5d0;
+
+    /* Define o tamanho da fonte */
+    font-size: 1.1rem;
+
+/* Fecha a regra hero-texto */
+}
+
+
+/* Seleciona a área da ilustração do hambúrguer */
+.hero-ilustracao {
+
+    /* Ativa o sistema Grid */
+    display: grid;
+
+    /* Define a altura mínima da ilustração */
+    min-height: 260px;
+
+    /* Centraliza o emoji horizontal e verticalmente */
+    place-items: center;
+
+    /* Cria uma borda dourada */
+    /* border: 2px solid var(--dourado); */
+
+    /* Arredonda os cantos */
+    border-radius: 30px;
+
+    /* Define um fundo branco com transparência */
+    background: rgba(255, 255, 255, 0.05);
+
+    /* Define o tamanho do emoji */
+    font-size: 9rem;
+
+/* Fecha a regra hero-ilustracao */
+}
+
+
+/* =====================================================
+   6. BOTÕES E EFEITOS
+   ===================================================== */
+
+/* Seleciona o botão principal e os links dos cartões */
+.botao,
+.card a {
+
+    /* Permite definir dimensões e espaçamentos */
+    display: inline-block;
+
+    /* Define o espaçamento interno */
+    padding: 0.75rem 1.25rem;
+
+    /* Arredonda completamente os cantos */
+    /* border-radius: 999px; */
+
+    /* Define o fundo vermelho */
+    /* background: var(--vermelho); */
+
+    /* Define a cor branca do texto */
+    color: var(--branco);
+
+    /* Deixa o texto em negrito */
+    font-weight: bold;
+
+    /* Remove o sublinhado */
+    text-decoration: none;
+
+/* Fecha a regra dos botões */
+}
+
+
+/* Aplica efeito quando o mouse passa sobre os botões */
+.botao:hover,
+.card a:hover {
+
+    /* Escurece a cor de fundo */
+    background: var(--vermelho-escuro);
+
+/* Fecha a regra hover */
+}
+
+
+/* =====================================================
+   7. SEÇÃO DO CARDÁPIO
+   ===================================================== */
+
+/* Seleciona a seção do cardápio */
+.cardapio {
+
+    /* Adiciona espaçamento interno acima e abaixo */
+    padding: 4rem 0;
+
+/* Fecha a regra cardapio */
+}
+
+
+/* Seleciona o bloco que contém o título da seção */
+.titulo-secao {
+
+    /* Limita a largura a 650 pixels */
+    max-width: 650px;
+
+    /* Define a margem inferior */
+    margin-bottom: 2rem;
+
+/* Fecha a regra titulo-secao */
+}
+
+
+/* Seleciona o último parágrafo dentro do título da seção */
+.titulo-secao p:last-child {
+
+    /* Define a cor marrom do texto */
+    color: #705b50;
+
+/* Fecha a regra */
+}
+
+
+/* Seleciona a grade que organiza os produtos */
+.grade-produtos {
+
+    /* Ativa o sistema Grid */
+    display: grid;
+
+    /* Define o espaço entre os cartões */
+    gap: 1.5rem;
+
+/* Fecha a regra grade-produtos */
+}
+
+
+/* =====================================================
+   8. CARTÕES DOS PRODUTOS
+   ===================================================== */
+
+/* Seleciona todos os cartões de produtos */
+.card {
+
+    /* Permite posicionar elementos internos */
+    position: relative;
+
+    /* Ativa o Flexbox */
+    display: flex;
+
+    /* Organiza os elementos verticalmente */
+    flex-direction: column;
+
+    /* Adiciona espaçamento interno */
+    padding: 1.5rem;
+
+    /* Cria uma borda fina */
+    border: 1px solid var(--borda);
+
+    /* Arredonda os cantos do cartão */
+    border-radius: 20px;
+
+    /* Define o fundo branco */
+    background: var(--branco);
+
+    /* Cria uma sombra suave ao redor do cartão */
+    box-shadow: 0 15px 35px rgba(70, 49, 32, 0.1);
+
+/* Fecha a regra card */
+}
+
+
+/* Seleciona o cartão que possui a classe de destaque */
+.card-destaque {
+
+    /* Cria uma borda dourada mais grossa */
+    border: 3px solid var(--dourado);
+
+/* Fecha a regra card-destaque */
+}
+
+
+/* Seleciona o selo de produto favorito */
+.selo {
+
+    /* Permite posicionar o selo dentro do cartão */
+    position: absolute;
+
+    /* Define a distância em relação ao topo */
+    top: 1rem;
+
+    /* Define a distância em relação à direita */
+    right: 1rem;
+
+    /* Define o espaçamento interno */
+    padding: 0.25rem 0.65rem;
+
+    /* Arredonda os cantos */
+    border-radius: 999px;
+
+    /* Define o fundo vermelho */
+    background: var(--vermelho);
+
+    /* Define a cor branca do texto */
+    color: var(--branco);
+
+    /* Define o tamanho da fonte */
+    font-size: 0.8rem;
+
+    /* Deixa o texto em negrito */
+    font-weight: bold;
+
+/* Fecha a regra selo */
+}
+
+
+/* Seleciona os emojis dos produtos */
+.card-icone {
+
+    /* Define a margem inferior */
+    margin-bottom: 1rem;
+
+    /* Define o tamanho dos emojis */
+    font-size: 4rem;
+
+/* Fecha a regra card-icone */
+}
+
+
+/* Seleciona os parágrafos dentro dos cartões */
+.card p {
+
+    /* Define a cor marrom das descrições */
+    color: #705b50;
+
+/* Fecha a regra */
+}
+
+
+/* Seleciona o rodapé interno dos cartões */
+.card-rodape {
+
+    /* Ativa o Flexbox */
+    display: flex;
+
+    /* Alinha os elementos verticalmente */
+    align-items: center;
+
+    /* Distribui os elementos nas extremidades */
+    justify-content: space-between;
+
+    /* Define o espaço entre os elementos */
+    gap: 1rem;
+
+    /* Empurra o rodapé para a parte inferior do cartão */
+    margin-top: auto;
+
+    /* Adiciona espaçamento interno superior */
+    padding-top: 1rem;
+
+/* Fecha a regra card-rodape */
+}
+
+
+/* Seleciona os preços em negrito dentro dos cartões */
+.card-rodape strong {
+
+    /* Define a cor vermelha dos preços */
+    color: var(--vermelho);
+
+    /* Aumenta o tamanho da fonte */
+    font-size: 1.2rem;
+
+/* Fecha a regra */
+}
+
+
+/* Seleciona os links dentro dos cartões */
+.card a {
+
+    /* Define o espaçamento interno */
+    padding: 0.5rem 1rem;
+
+    /* Define o tamanho da fonte */
+    font-size: 0.9rem;
+
+/* Fecha a regra */
+}
+
+
+/* =====================================================
+   9. SEÇÃO DE PEDIDOS
+   ===================================================== */
+
+/* Seleciona a seção que explica como fazer um pedido */
+.pedido {
+
+    /* Adiciona espaçamento interno acima e abaixo */
+    padding: 4rem 0;
+
+    /* Define um fundo bege claro */
+    background: #f4e5d0;
+
+/* Fecha a regra pedido */
+}
+
+
+/* Seleciona o conteúdo interno da seção de pedidos */
+.pedido-conteudo {
+
+    /* Ativa o sistema Grid */
+    display: grid;
+
+    /* Define o espaço entre os elementos */
+    gap: 2rem;
+
+/* Fecha a regra pedido-conteudo */
+}
+
+
+/* Seleciona a lista ordenada da seção de pedidos */
+.pedido ol {
+
+    /* Ativa o sistema Grid */
+    display: grid;
+
+    /* Define o espaço entre os itens */
+    gap: 0.75rem;
+
+    /* Remove as margens externas */
+    margin: 0;
+
+    /* Remove o espaçamento interno padrão */
+    padding: 0;
+
+    /* Remove a numeração padrão da lista */
+    list-style: none;
+
+/* Fecha a regra da lista */
+}
+
+
+/* Seleciona cada item da lista de pedidos */
+.pedido li {
+
+    /* Ativa o Flexbox */
+    display: flex;
+
+    /* Alinha os elementos verticalmente ao centro */
+    align-items: center;
+
+    /* Define o espaço entre o número e o texto */
+    gap: 0.75rem;
+
+    /* Adiciona espaçamento interno */
+    padding: 1rem;
+
+    /* Cria uma borda ao redor do item */
+    border: 1px solid var(--borda);
+
+    /* Arredonda os cantos */
+    border-radius: 12px;
+
+    /* Define o fundo branco */
+    background: var(--branco);
+
+/* Fecha a regra dos itens */
+}
+
+
+/* Seleciona o número dentro de cada item da lista */
+.pedido li span {
+
+    /* Ativa o sistema Grid */
+    display: grid;
+
+    /* Define a largura do círculo */
+    width: 35px;
+
+    /* Define a altura do círculo */
+    height: 35px;
+
+    /* Centraliza o número horizontal e verticalmente */
+    place-items: center;
+
+    /* Transforma o elemento em um círculo */
+    border-radius: 50%;
+
+    /* Define o fundo dourado */
+    background: var(--dourado);
+
+    /* Deixa o número em negrito */
+    font-weight: bold;
+
+/* Fecha a regra span */
+}
+
+
+/* =====================================================
+   10. RODAPÉ DO SITE
+   ===================================================== */
+
+/* Seleciona o rodapé da página */
+footer {
+
+    /* Adiciona espaçamento interno acima e abaixo */
+    padding: 2rem 0;
+
+    /* Define o fundo escuro */
+    background: #211714;
+
+    /* Define a cor clara dos textos */
+    color: #f4e5d0;
+
+/* Fecha a regra footer */
+}
+
+
+/* Seleciona o conteúdo interno do rodapé */
+.rodape-conteudo {
+
+    /* Ativa o sistema Grid */
+    display: grid;
+
+    /* Define o espaço entre os elementos */
+    gap: 1rem;
+
+/* Fecha a regra rodape-conteudo */
+}
+
+
+/* Seleciona os parágrafos dentro do rodapé */
+footer p {
+
+    /* Define as margens dos parágrafos */
+    margin: 0.25rem 0;
+
+/* Fecha a regra */
+}
+
+
+/* =====================================================
+   11. RESPONSIVIDADE - MEDIA QUERY
+   ===================================================== */
+
+/* Aplica as regras somente quando a tela tiver
+   largura mínima de 700 pixels */
+@media (min-width: 700px) {
+
+    /* Seleciona o conteúdo do cabeçalho e do rodapé */
+    .cabecalho-conteudo,
+    .rodape-conteudo {
+
+        /* Organiza os elementos horizontalmente */
+        flex-direction: row;
+
+        /* Alinha os elementos verticalmente ao centro */
+        align-items: center;
+
+        /* Distribui os elementos entre as extremidades */
+        justify-content: space-between;
+
+    /* Fecha as configurações */
+    }
+
+
+    /* Seleciona o conteúdo do cabeçalho */
+    .cabecalho-conteudo {
+
+        /* Ativa o Flexbox */
+        display: flex;
+
+    /* Fecha a regra */
+    }
+
+
+    /* Seleciona o conteúdo do rodapé */
+    .rodape-conteudo {
+
+        /* Ativa o Flexbox */
+        display: flex;
+
+    /* Fecha a regra */
+    }
+
+
+    /* Seleciona a seção inicial e a seção de pedidos */
+    .hero-conteudo,
+    .pedido-conteudo {
+
+        /* Divide o conteúdo em duas colunas iguais */
+        grid-template-columns: 1fr 1fr;
+
+    /* Fecha a regra */
+    }
+
+
+    /* Seleciona a grade dos produtos */
+    .grade-produtos {
+
+        /* Organiza os produtos em três colunas iguais */
+        grid-template-columns: repeat(3, 1fr);
+
+    /* Fecha a regra */
+    }
+
+/* Fecha a Media Query */
+}
